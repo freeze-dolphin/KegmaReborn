@@ -143,13 +143,34 @@ objects
 	index: 48
 	bounds: 192, 160, 32, 32
 objects
-	index: 104
+	index: 96
+	bounds: 192, 160, 32, 32
+objects
+	index: 51
+	bounds: 192, 160, 32, 32
+objects
+	index: 127
+	bounds: 192, 160, 32, 32
+objects
+	index: 117
+	bounds: 192, 160, 32, 32
+objects
+	index: 47
 	bounds: 192, 160, 32, 32
 objects
 	index: 199
 	bounds: 192, 160, 32, 32
 objects
+	index: 104
+	bounds: 192, 160, 32, 32
+objects
 	index: 192
+	bounds: 192, 160, 32, 32
+objects
+	index: 113
+	bounds: 192, 160, 32, 32
+objects
+	index: 118
 	bounds: 192, 160, 32, 32
 objects
 	index: 88
@@ -158,37 +179,16 @@ objects
 	index: 112
 	bounds: 192, 160, 32, 32
 objects
-	index: 114
-	bounds: 192, 160, 32, 32
-objects
-	index: 96
-	bounds: 192, 160, 32, 32
-objects
-	index: 51
-	bounds: 192, 160, 32, 32
-objects
 	index: 120
-	bounds: 192, 160, 32, 32
-objects
-	index: 117
-	bounds: 192, 160, 32, 32
-objects
-	index: 95
-	bounds: 192, 160, 32, 32
-objects
-	index: 113
 	bounds: 192, 160, 32, 32
 objects
 	index: 99
 	bounds: 192, 160, 32, 32
 objects
-	index: 47
+	index: 114
 	bounds: 192, 160, 32, 32
 objects
-	index: 118
-	bounds: 192, 160, 32, 32
-objects
-	index: 127
+	index: 95
 	bounds: 192, 160, 32, 32
 objects
 	index: 49
