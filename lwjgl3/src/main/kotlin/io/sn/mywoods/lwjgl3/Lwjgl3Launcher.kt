@@ -22,7 +22,7 @@ fun main() {
             do {
                 line = bufferedReader.readLine()
                 if (line != null) {
-                    fw.write(line)
+                    fw.write("$line\n")
                 }
             } while (line != null)
             fw.close()
