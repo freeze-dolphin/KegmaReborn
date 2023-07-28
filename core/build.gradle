@@ -2,6 +2,9 @@
 eclipse.project.name = appName + '-core'
 
 dependencies {
+    // test
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.8.1"
 
     // core deps
     api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
@@ -27,4 +30,8 @@ dependencies {
     // language runtime
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
+}
+
+test {
+    useJUnitPlatform()
 }

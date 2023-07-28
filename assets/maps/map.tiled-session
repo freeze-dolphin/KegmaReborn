@@ -1,0 +1,23 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "woods.tsx": {
+            "scaleInEditor": 1
+        }
+    },
+    "last.imagePath": "/home/freeze-dolphin/Documents/workspace/idea/MysticWoods/assets/graphics",
+    "map.lastUsedFormat": "tmx",
+    "openFiles": [
+    ],
+    "project": "map.tiled-project",
+    "recentFiles": [
+        "woods.tsx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

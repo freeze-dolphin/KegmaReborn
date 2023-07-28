@@ -7,6 +7,13 @@ import com.github.quillraven.fleks.ComponentType
 import ktx.log.logger
 
 @Suppress("unused")
+enum class AnimationModel {
+    FIGHTER, SLIME, CHEST_DOWN;
+
+    val atlasKey = this.toString().lowercase()
+}
+
+@Suppress("unused")
 enum class AnimationType {
     UP, DOWN, LEFT, RIGHT;
 
@@ -14,10 +21,10 @@ enum class AnimationType {
 }
 
 class AnimationComponent(
-    private var atlasKey: String,
+    private var model: AnimationModel,
     var stateTime: Float = 0f,
     var frameDuration: Float = 1 / 8f,
-    var playMode: Animation.PlayMode = Animation.PlayMode.REVERSED
+    var playMode: Animation.PlayMode = Animation.PlayMode.REVERSED,
 ) : Component<AnimationComponent> {
 
     lateinit var animation: Animation<TextureRegionDrawable>
@@ -30,9 +37,9 @@ class AnimationComponent(
         private val log = logger<AnimationComponent>()
     }
 
-    fun nextFrame(atlasKey: String, type: AnimationType) {
-        this.atlasKey = atlasKey
-        nextAnimation = "$atlasKey/${type.atlasKey}"
+    fun nextFrame(model: AnimationModel, type: AnimationType) {
+        this.model = model
+        nextAnimation = "${model.atlasKey}/${type.atlasKey}"
         log.debug { "nextAnimation: $nextAnimation" }
     }
 

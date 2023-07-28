@@ -7,6 +7,7 @@ import com.github.quillraven.fleks.Entity
 import com.github.quillraven.fleks.IteratingSystem
 import com.github.quillraven.fleks.World
 import io.sn.mywoods.component.AnimationComponent
+import io.sn.mywoods.component.AnimationType
 import io.sn.mywoods.component.ImageComponent
 import ktx.app.gdxError
 import ktx.log.logger
@@ -16,6 +17,21 @@ class AnimationSystem(
 ) : IteratingSystem(World.family {
     all(AnimationComponent, ImageComponent)
 }) {
+    companion object {
+        private val log = logger<AnimationSystem>()
+
+        fun nextRotation(aniType: String): String {
+            return when (aniType.ifEmpty { "up" }.split("/")[0]) {
+                "up" -> "left"
+                "left" -> "right"
+                "right" -> "down"
+                "down" -> "up"
+                else -> ""
+            }.let {
+                AnimationType.valueOf(it.uppercase()).atlasKey
+            }
+        }
+    }
 
     private val cache = mutableMapOf<String, Animation<TextureRegionDrawable>>()
 
@@ -23,8 +39,8 @@ class AnimationSystem(
         val etyAniCmp = entity[AnimationComponent]
         val etyImgCmp = entity[ImageComponent]
 
-        val frame = when (etyAniCmp.nextAnimation) {
-            AnimationComponent.NO_ANIMATION -> {
+        val frame = when {
+            etyAniCmp.nextAnimation == AnimationComponent.NO_ANIMATION -> {
                 etyAniCmp.stateTime = 0f
                 etyAniCmp.animation.playMode = Animation.PlayMode.NORMAL
                 etyAniCmp.animation.getKeyFrame(0f)
@@ -50,10 +66,6 @@ class AnimationSystem(
         Animation(frameDuration, *regions.map {
             TextureRegionDrawable(it)
         }.toTypedArray())
-    }
-
-    companion object {
-        private val log = logger<AnimationComponent>()
     }
 
 }
