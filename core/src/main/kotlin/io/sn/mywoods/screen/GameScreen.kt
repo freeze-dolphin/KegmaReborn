@@ -5,10 +5,13 @@ import com.badlogic.gdx.Input
 import com.badlogic.gdx.graphics.g2d.Animation
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.graphics.g2d.TextureRegion
+import com.badlogic.gdx.maps.tiled.TiledMap
 import com.badlogic.gdx.maps.tiled.TmxMapLoader
+import com.badlogic.gdx.maps.tiled.tiles.AnimatedTiledMapTile
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.scenes.scene2d.ui.Image
 import com.badlogic.gdx.utils.Scaling
+import com.badlogic.gdx.utils.viewport.ExtendViewport
 import com.badlogic.gdx.utils.viewport.ScalingViewport
 import com.github.quillraven.fleks.configureWorld
 import io.sn.mywoods.component.AnimationComponent
@@ -26,10 +29,11 @@ import ktx.log.logger
 
 class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
-    private val stage = Stage(ScalingViewport(Scaling.fit, 16f, 9f))
+    private val stage = Stage(ExtendViewport(16f, 9f))
     private val objAtlas = TextureAtlas("graphics/gameObjects.atlas")
     private val aniAtlas = TextureAtlas("graphics/gameAnimation.atlas")
     private val mapAtlas = TextureAtlas("graphics/gameMap.atlas")
+    private var currentMap: TiledMap? = null
 
     private val world = configureWorld {
         injectables {
@@ -56,8 +60,8 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
         world.registerAllListener(stage)
 
-        val map = TmxMapLoader().load("maps/woods.tmx")
-        stage.fireEvent(MapChangeEvent(map))
+        currentMap = TmxMapLoader().load("maps/woods.tmx")
+        stage.fireEvent(MapChangeEvent(currentMap!!))
 
         world.entity {
             it += ImageComponent().apply {
@@ -117,18 +121,22 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
             Gdx.graphics.setFullscreenMode(Gdx.graphics.displayMode)
         }
 
+
         // camera toggler
+        /*
         val sviewport = (stage.viewport as ScalingViewport)
         if (Gdx.input.isKeyJustPressed(Input.Keys.F10)) if (sviewport.scaling == Scaling.fit) {
             sviewport.scaling = Scaling.fill
         } else {
             sviewport.scaling = Scaling.fit
         }
+        */
         stage.viewport.update(Gdx.graphics.width, Gdx.graphics.height, true)
     }
 
     override fun dispose() {
         stage.disposeSafely()
+        currentMap?.disposeSafely()
         objAtlas.disposeSafely()
         aniAtlas.disposeSafely()
         mapAtlas.disposeSafely()

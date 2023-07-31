@@ -3,6 +3,7 @@ package io.sn.mywoods.system
 import com.badlogic.gdx.graphics.OrthographicCamera
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer
+import com.badlogic.gdx.maps.tiled.tiles.AnimatedTiledMapTile
 import com.badlogic.gdx.scenes.scene2d.Event
 import com.badlogic.gdx.scenes.scene2d.EventListener
 import com.badlogic.gdx.scenes.scene2d.Stage
@@ -12,6 +13,7 @@ import com.github.quillraven.fleks.World.Companion.family
 import com.github.quillraven.fleks.collection.compareEntity
 import io.sn.mywoods.component.ImageComponent
 import io.sn.mywoods.event.MapChangeEvent
+import ktx.assets.disposeSafely
 import ktx.graphics.use
 import ktx.tiled.forEachLayer
 
@@ -33,6 +35,7 @@ class RenderSystem(
         with(stage) {
             viewport.apply()
 
+            AnimatedTiledMapTile.updateAnimationBaseTime()
             mapRenderer.setView(orthogonalCamera)
 
             if (blayer.isNotEmpty()) {
@@ -64,14 +67,18 @@ class RenderSystem(
             flayer.clear()
             blayer.clear()
             event.map.forEachLayer<TiledMapTileLayer> { layer ->
-                if (layer.name.startsWith("flayer_")) {
+                if (layer.name.startsWith("1")) {
                     flayer.add(layer)
-                } else {
+                } else if (layer.name.startsWith("0")) {
                     blayer.add(layer)
                 }
             }
             return true
         }
         return false
+    }
+
+    override fun onDispose() {
+        mapRenderer.disposeSafely()
     }
 }
