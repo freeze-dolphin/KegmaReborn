@@ -50,8 +50,8 @@ debug=false
 duplicatePadding=false
 edgePadding=true
 fast=true
-filterMag=Nearest
-filterMin=Nearest
+filterMag=Linear
+filterMin=Linear
 ignoreBlankImages=true
 maxHeight=1024
 maxWidth=256
@@ -76,7 +76,7 @@ prettyPrint=true
 legacyOutput=false
 
 scaleFactors=[{suffix:"",factor:1,resampling:bicubic}]
-inputFiles=[{path:tiledmap,type:Input,dirFilePrefix:null,recursive:false,flattenPaths:false}]
+inputFiles=[{path:tiledmap,type:Input,dirFilePrefix:null,recursive:true,flattenPaths:false}]
 keepInputFileExtensions=false
 
 
