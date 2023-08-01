@@ -2,22 +2,12 @@ package io.sn.mywoods.screen
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Input
-import com.badlogic.gdx.graphics.g2d.Animation
 import com.badlogic.gdx.graphics.g2d.TextureAtlas
-import com.badlogic.gdx.graphics.g2d.TextureRegion
 import com.badlogic.gdx.maps.tiled.TiledMap
 import com.badlogic.gdx.maps.tiled.TmxMapLoader
-import com.badlogic.gdx.maps.tiled.tiles.AnimatedTiledMapTile
 import com.badlogic.gdx.scenes.scene2d.Stage
-import com.badlogic.gdx.scenes.scene2d.ui.Image
-import com.badlogic.gdx.utils.Scaling
 import com.badlogic.gdx.utils.viewport.ExtendViewport
-import com.badlogic.gdx.utils.viewport.ScalingViewport
 import com.github.quillraven.fleks.configureWorld
-import io.sn.mywoods.component.AnimationComponent
-import io.sn.mywoods.component.AnimationModel
-import io.sn.mywoods.component.AnimationType
-import io.sn.mywoods.component.ImageComponent
 import io.sn.mywoods.event.MapChangeEvent
 import io.sn.mywoods.fireEvent
 import io.sn.mywoods.registerAllListener
@@ -63,6 +53,7 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
         currentMap = TmxMapLoader().load("maps/woods.tmx")
         stage.fireEvent(MapChangeEvent(currentMap!!))
 
+        /*
         world.entity {
             it += ImageComponent().apply {
                 image = Image(TextureRegion(objAtlas.findRegion("fighter"), 0, 0, 32, 48)).apply {
@@ -101,12 +92,14 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
                 nextFrame(AnimationModel.CHEST_DOWN, AnimationType.LEFT)
             }
         }
+        */
 
         logger.debug { "GameScreen initialized." }
     }
 
     override fun resize(width: Int, height: Int) {
-        stage.viewport.update(width, height, true)
+        //stage.viewport.update(width, height, true)
+        //stage.camera.lookAt(0f, 0f, 0f)
     }
 
     override fun render(delta: Float) {
