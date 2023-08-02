@@ -11,6 +11,7 @@ import com.github.quillraven.fleks.Entity
 import com.github.quillraven.fleks.IteratingSystem
 import com.github.quillraven.fleks.World.Companion.family
 import com.github.quillraven.fleks.collection.compareEntity
+import io.sn.mywoods.MysticWoods.Companion.UNIT_SCALE
 import io.sn.mywoods.component.ImageComponent
 import io.sn.mywoods.event.MapChangeEvent
 import ktx.assets.disposeSafely
@@ -26,7 +27,7 @@ class RenderSystem(
     private val flayer = mutableListOf<TiledMapTileLayer>()
     private val blayer = mutableListOf<TiledMapTileLayer>()
 
-    private val mapRenderer = OrthogonalTiledMapRenderer(null, 1 / 32f, stage.batch)
+    private val mapRenderer = OrthogonalTiledMapRenderer(null, UNIT_SCALE, stage.batch)
     private val orthogonalCamera = stage.camera as OrthographicCamera
 
     override fun onTick() {

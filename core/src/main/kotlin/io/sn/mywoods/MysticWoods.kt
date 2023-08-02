@@ -15,4 +15,8 @@ class MysticWoods(private val config: Map<String, Any>) : KtxGame<KtxScreen>() {
         setScreen<GameScreen>()
     }
 
+    companion object {
+        const val UNIT_SCALE = 1 / 32f
+    }
+
 }

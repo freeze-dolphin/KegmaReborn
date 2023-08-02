@@ -8,5 +8,17 @@
         "."
     ],
     "propertyTypes": [
+        {
+            "id": 1,
+            "name": "EntityType",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Fighter",
+                "Slime",
+                "ChestDown"
+            ],
+            "valuesAsFlags": false
+        }
     ]
 }

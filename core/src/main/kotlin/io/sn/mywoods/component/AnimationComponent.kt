@@ -15,7 +15,7 @@ enum class AnimationModel {
 
 @Suppress("unused")
 enum class AnimationType {
-    UP, DOWN, LEFT, RIGHT;
+    UP, DOWN, LEFT, RIGHT, NO_ANIMATION;
 
     val atlasKey = this.toString().lowercase()
 }
@@ -39,7 +39,11 @@ class AnimationComponent(
 
     fun nextFrame(model: AnimationModel, type: AnimationType) {
         this.model = model
-        nextAnimation = "${model.atlasKey}/${type.atlasKey}"
+        nextAnimation = if (type == AnimationType.NO_ANIMATION) {
+            "#${model.atlasKey}/down"
+        } else {
+            "${model.atlasKey}/${type.atlasKey}"
+        }
         log.debug { "nextAnimation: $nextAnimation" }
     }
 

@@ -12,6 +12,7 @@ import io.sn.mywoods.event.MapChangeEvent
 import io.sn.mywoods.fireEvent
 import io.sn.mywoods.registerAllListener
 import io.sn.mywoods.system.AnimationSystem
+import io.sn.mywoods.system.EntitySpawnSystem
 import io.sn.mywoods.system.RenderSystem
 import ktx.app.KtxScreen
 import ktx.assets.disposeSafely
@@ -33,6 +34,7 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
         systems {
             add(RenderSystem(stage))
             add(AnimationSystem(aniAtlas))
+            add(EntitySpawnSystem())
         }
     }
 
@@ -52,47 +54,6 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
         currentMap = TmxMapLoader().load("maps/woods.tmx")
         stage.fireEvent(MapChangeEvent(currentMap!!))
-
-        /*
-        world.entity {
-            it += ImageComponent().apply {
-                image = Image(TextureRegion(objAtlas.findRegion("fighter"), 0, 0, 32, 48)).apply {
-                    setPosition(1f, 5f)
-                    setSize(2f, 2f)
-                    setScaling(Scaling.fit)
-                }
-            }
-            it += AnimationComponent(AnimationModel.FIGHTER, 0f, 1 / 4f, Animation.PlayMode.LOOP_REVERSED).apply {
-                nextFrame(AnimationModel.FIGHTER, AnimationType.DOWN)
-            }
-        }
-
-        world.entity {
-            it += ImageComponent().apply {
-                image = Image(TextureRegion(objAtlas.findRegion("slime"), 0, 0, 48, 48)).apply {
-                    setPosition(6f, 5f)
-                    setSize(1f, 1f)
-                    setScaling(Scaling.fit)
-                }
-            }
-            it += AnimationComponent(AnimationModel.SLIME, 0f, 1 / 4f, Animation.PlayMode.LOOP_REVERSED).apply {
-                nextFrame(AnimationModel.SLIME, AnimationType.DOWN)
-            }
-        }
-
-        world.entity {
-            it += ImageComponent().apply {
-                image = Image(TextureRegion(objAtlas.findRegion("chest_down"), 0, 0, 32, 48)).apply {
-                    setPosition(4f, 3f)
-                    setSize(1.5f, 1.5f)
-                    setScaling(Scaling.fit)
-                }
-            }
-            it += AnimationComponent(AnimationModel.CHEST_DOWN, 0f, 1 / 8f, Animation.PlayMode.NORMAL).apply {
-                nextFrame(AnimationModel.CHEST_DOWN, AnimationType.LEFT)
-            }
-        }
-        */
 
         logger.debug { "GameScreen initialized." }
     }

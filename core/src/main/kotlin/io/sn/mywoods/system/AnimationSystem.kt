@@ -40,9 +40,9 @@ class AnimationSystem(
         val etyImgCmp = entity[ImageComponent]
 
         val frame = when {
-            etyAniCmp.nextAnimation == AnimationComponent.NO_ANIMATION -> {
+            etyAniCmp.nextAnimation.startsWith("#") -> {
+                etyAniCmp.animation = animation(0f, etyAniCmp.nextAnimation.slice(1 until etyAniCmp.nextAnimation.length))
                 etyAniCmp.stateTime = 0f
-                etyAniCmp.animation.playMode = Animation.PlayMode.NORMAL
                 etyAniCmp.animation.getKeyFrame(0f)
             }
 

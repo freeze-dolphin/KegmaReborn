@@ -26,6 +26,7 @@ dependencies {
 
     // thrid-party deps
     api "io.github.quillraven.fleks:Fleks:$fleksVersion"
+    implementation 'com.google.guava:guava:32.1.2-jre'
 
     // language runtime
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
