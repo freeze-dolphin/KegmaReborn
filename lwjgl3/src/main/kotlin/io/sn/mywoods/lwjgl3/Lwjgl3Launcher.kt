@@ -9,6 +9,7 @@ import org.yaml.snakeyaml.Yaml
 import java.io.*
 
 /** Launches the desktop (LWJGL3) application. */
+
 fun main() {
     // This handles macOS support and helps on Windows.
     if (StartupHelper.startNewJvmIfRequired()) return

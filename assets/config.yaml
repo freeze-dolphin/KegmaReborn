@@ -6,6 +6,6 @@ vsync: true
 # 680x480
 # 1280x720
 # 1920x1080
-resolution: 680x480
+resolution: 1280x720
 
 fullscreen: false

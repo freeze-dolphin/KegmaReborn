@@ -18,10 +18,10 @@ chest_down/left
 	bounds: 864, 0, 32, 48
 chest_down/left
 	index: 7
-	bounds: 1152, 0, 32, 48
+	bounds: 1120, 0, 32, 48
 chest_down/left
 	index: 4
-	bounds: 1344, 0, 32, 48
+	bounds: 1312, 0, 32, 48
 chest_down/left
 	index: 6
 	bounds: 1568, 0, 32, 48
@@ -30,7 +30,7 @@ chest_down/right
 	bounds: 1056, 0, 32, 48
 chest_down/right
 	index: 11
-	bounds: 1312, 0, 32, 48
+	bounds: 1280, 0, 32, 48
 chest_down/right
 	index: 8
 	bounds: 1504, 0, 32, 48
@@ -42,61 +42,61 @@ chest_down/up
 	bounds: 800, 0, 32, 48
 chest_down/up
 	index: 12
-	bounds: 928, 0, 32, 48
+	bounds: 896, 0, 32, 48
 chest_down/up
 	index: 14
-	bounds: 1216, 0, 32, 48
+	bounds: 1184, 0, 32, 48
 chest_down/up
 	index: 13
-	bounds: 1632, 0, 32, 48
+	bounds: 1600, 0, 32, 48
 fighter/down
 	index: 1
-	bounds: 992, 0, 32, 48
+	bounds: 960, 0, 32, 48
 fighter/down
 	index: 3
 	bounds: 1248, 0, 32, 48
 fighter/down
 	index: 0
-	bounds: 1472, 0, 32, 48
+	bounds: 1440, 0, 32, 48
 fighter/down
 	index: 2
-	bounds: 1472, 0, 32, 48
+	bounds: 1440, 0, 32, 48
 fighter/left
 	index: 5
-	bounds: 896, 0, 32, 48
+	bounds: 928, 0, 32, 48
 fighter/left
 	index: 7
-	bounds: 1184, 0, 32, 48
+	bounds: 1216, 0, 32, 48
 fighter/left
 	index: 4
 	bounds: 1376, 0, 32, 48
 fighter/left
 	index: 6
-	bounds: 1600, 0, 32, 48
+	bounds: 1632, 0, 32, 48
 fighter/right
 	index: 9
 	bounds: 768, 0, 32, 48
 fighter/right
 	index: 11
-	bounds: 960, 0, 32, 48
+	bounds: 1024, 0, 32, 48
 fighter/right
 	index: 8
-	bounds: 1120, 0, 32, 48
+	bounds: 1152, 0, 32, 48
 fighter/right
 	index: 10
 	bounds: 1408, 0, 32, 48
 fighter/up
 	index: 13
-	bounds: 1024, 0, 32, 48
+	bounds: 992, 0, 32, 48
 fighter/up
 	index: 15
-	bounds: 1280, 0, 32, 48
+	bounds: 1344, 0, 32, 48
 fighter/up
 	index: 12
-	bounds: 1440, 0, 32, 48
+	bounds: 1472, 0, 32, 48
 fighter/up
 	index: 14
-	bounds: 1440, 0, 32, 48
+	bounds: 1472, 0, 32, 48
 slime/down
 	index: 3
 	bounds: 0, 0, 48, 48
@@ -126,7 +126,7 @@ slime/right
 	bounds: 96, 0, 48, 48
 slime/right
 	index: 9
-	bounds: 384, 0, 48, 48
+	bounds: 432, 0, 48, 48
 slime/right
 	index: 11
 	bounds: 576, 0, 48, 48
@@ -141,7 +141,7 @@ slime/up
 	bounds: 240, 0, 48, 48
 slime/up
 	index: 12
-	bounds: 432, 0, 48, 48
+	bounds: 384, 0, 48, 48
 slime/up
 	index: 14
 	bounds: 528, 0, 48, 48

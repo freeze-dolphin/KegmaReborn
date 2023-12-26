@@ -20,10 +20,10 @@ import ktx.log.logger
 
 class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
-    private val stage = Stage(ExtendViewport(16f, 9f))
+    private val stage = Stage(ExtendViewport( 16f, 9f))
     private val objAtlas = TextureAtlas("graphics/gameObjects.atlas")
     private val aniAtlas = TextureAtlas("graphics/gameAnimation.atlas")
-    private val mapAtlas = TextureAtlas("graphics/gameMap.atlas")
+    private val mapAtlas = TextureAtlas("graphics/gameMapAshlands.atlas")
     private var currentMap: TiledMap? = null
 
     private val world = configureWorld {
@@ -44,7 +44,7 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
     }
 
     override fun show() {
-        logger.debug { "GameScreen begins." }
+        logger.debug { "GameScreen begins" }
 
         if (config.getOrDefault("fullscreen", "false") as Boolean) {
             Gdx.graphics.setFullscreenMode(Gdx.graphics.displayMode)
@@ -52,10 +52,10 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
         world.registerAllListener(stage)
 
-        currentMap = TmxMapLoader().load("maps/woods.tmx")
+        currentMap = TmxMapLoader().load("maps/ashlands.tmx")
         stage.fireEvent(MapChangeEvent(currentMap!!))
 
-        logger.debug { "GameScreen initialized." }
+        logger.debug { "GameScreen initialized" }
     }
 
     override fun resize(width: Int, height: Int) {
@@ -75,16 +75,6 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
             Gdx.graphics.setFullscreenMode(Gdx.graphics.displayMode)
         }
 
-
-        // camera toggler
-        /*
-        val sviewport = (stage.viewport as ScalingViewport)
-        if (Gdx.input.isKeyJustPressed(Input.Keys.F10)) if (sviewport.scaling == Scaling.fit) {
-            sviewport.scaling = Scaling.fill
-        } else {
-            sviewport.scaling = Scaling.fit
-        }
-        */
         stage.viewport.update(Gdx.graphics.width, Gdx.graphics.height, true)
     }
 

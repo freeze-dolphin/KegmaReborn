@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.1" name="woods" tilewidth="32" tileheight="32" spacing="2" margin="1" tilecount="1800" columns="30">
- <image source="../graphics/gameMap.png" width="1024" height="2048"/>
+<tileset version="1.10" tiledversion="1.10.2" name="woods" tilewidth="32" tileheight="32" spacing="2" margin="1" tilecount="1800" columns="30">
+ <image source="../graphics/gameMapWoods.png" width="1024" height="2048"/>
  <tile id="0">
   <animation>
    <frame tileid="0" duration="200"/>
@@ -15,6 +15,14 @@
    <frame tileid="15" duration="200"/>
    <frame tileid="18" duration="200"/>
    <frame tileid="21" duration="200"/>
+  </animation>
+ </tile>
+ <tile id="14">
+  <animation>
+   <frame tileid="14" duration="200"/>
+   <frame tileid="17" duration="200"/>
+   <frame tileid="20" duration="200"/>
+   <frame tileid="23" duration="200"/>
   </animation>
  </tile>
  <tile id="30">
@@ -106,21 +114,22 @@
   </animation>
  </tile>
  <wangsets>
-  <wangset name="Water" type="corner" tile="-1">
+  <wangset name="water" type="mixed" tile="-1">
    <wangcolor name="" color="#ff0000" tile="-1" probability="1"/>
    <wangtile tileid="0" wangid="0,0,0,1,0,0,0,0"/>
-   <wangtile tileid="13" wangid="0,1,0,1,0,1,0,1"/>
+   <wangtile tileid="13" wangid="1,1,1,1,1,1,1,1"/>
+   <wangtile tileid="14" wangid="0,1,0,1,0,1,0,1"/>
    <wangtile tileid="30" wangid="0,0,0,0,0,1,0,0"/>
-   <wangtile tileid="42" wangid="0,1,0,0,0,1,0,1"/>
-   <wangtile tileid="43" wangid="0,1,0,0,0,0,0,1"/>
-   <wangtile tileid="44" wangid="0,1,0,1,0,0,0,1"/>
+   <wangtile tileid="42" wangid="1,1,0,0,0,1,1,1"/>
+   <wangtile tileid="43" wangid="1,1,0,0,0,0,0,1"/>
+   <wangtile tileid="44" wangid="1,1,1,1,0,0,0,1"/>
    <wangtile tileid="60" wangid="0,1,0,0,0,0,0,0"/>
-   <wangtile tileid="72" wangid="0,0,0,0,0,1,0,1"/>
-   <wangtile tileid="74" wangid="0,1,0,1,0,0,0,0"/>
+   <wangtile tileid="72" wangid="0,0,0,0,0,1,1,1"/>
+   <wangtile tileid="74" wangid="0,1,1,1,0,0,0,0"/>
    <wangtile tileid="90" wangid="0,0,0,0,0,0,0,1"/>
-   <wangtile tileid="102" wangid="0,0,0,1,0,1,0,1"/>
-   <wangtile tileid="103" wangid="0,0,0,1,0,1,0,0"/>
-   <wangtile tileid="104" wangid="0,1,0,1,0,1,0,0"/>
+   <wangtile tileid="102" wangid="0,0,0,1,1,1,1,1"/>
+   <wangtile tileid="103" wangid="0,0,0,1,1,1,0,0"/>
+   <wangtile tileid="104" wangid="0,1,1,1,1,1,0,0"/>
   </wangset>
  </wangsets>
 </tileset>

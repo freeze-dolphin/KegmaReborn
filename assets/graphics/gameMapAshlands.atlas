@@ -1,0 +1,16 @@
+gameMapAshlands.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	repeat: none
+tf_A1_ashlands
+	index: 2
+	bounds: 0, 0, 512, 384
+tf_A2_ashlands
+	index: 2
+	bounds: 512, 0, 512, 384
+tf_A5_ashlands
+	index: 2
+	bounds: 0, 512, 256, 512
+tf_B_ashlands
+	index: 2
+	bounds: 512, 512, 512, 512
