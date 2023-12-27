@@ -6,7 +6,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas
 import com.badlogic.gdx.maps.tiled.TiledMap
 import com.badlogic.gdx.maps.tiled.TmxMapLoader
 import com.badlogic.gdx.scenes.scene2d.Stage
-import com.badlogic.gdx.utils.viewport.ExtendViewport
+import com.badlogic.gdx.utils.Scaling
+import com.badlogic.gdx.utils.viewport.*
 import com.github.quillraven.fleks.configureWorld
 import io.sn.mywoods.event.MapChangeEvent
 import io.sn.mywoods.fireEvent
@@ -20,7 +21,7 @@ import ktx.log.logger
 
 class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
-    private val stage = Stage(ExtendViewport( 16f, 9f))
+    private val stage = Stage(ExtendViewport(18f, 12f))
     private val objAtlas = TextureAtlas("graphics/gameObjects.atlas")
     private val aniAtlas = TextureAtlas("graphics/gameAnimation.atlas")
     private val mapAtlas = TextureAtlas("graphics/gameMapAshlands.atlas")
@@ -68,7 +69,7 @@ class GameScreen(private val config: Map<String, Any>) : KtxScreen {
 
         // fullscreen toggler
         if (Gdx.input.isKeyJustPressed(Input.Keys.F11)) if (Gdx.graphics.isFullscreen) {
-            (config.getOrDefault("resolution", "1280x720") as String).split("x").map { it.toInt() }.let {
+            (config.getOrDefault("resolution", "960x640") as String).split("x").map { it.toInt() }.let {
                 Gdx.graphics.setWindowedMode(it[0], it[1])
             }
         } else {

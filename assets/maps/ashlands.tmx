@@ -1,105 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="23">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" source="ashlands.tsx"/>
- <tileset firstgid="2049" name="entities" tilewidth="48" tileheight="48" tilecount="3" columns="0">
-  <grid orientation="orthogonal" width="1" height="1"/>
-  <tile id="4">
-   <image width="32" height="48" source="entities/fighter.png"/>
-  </tile>
-  <tile id="5">
-   <image width="48" height="48" source="entities/slime.png"/>
-  </tile>
-  <tile id="6">
-   <image width="32" height="48" source="entities/chest_down.png"/>
-  </tile>
- </tileset>
- <layer id="1" name="00" width="32" height="18">
-  <data encoding="csv">
-514,514,519,520,516,516,516,514,516,53,610,54,520,520,516,520,519,514,520,516,514,514,519,519,519,514,514,514,520,514,519,520,
-520,520,519,519,514,520,516,609,610,612,642,613,611,514,516,520,519,516,519,519,519,520,514,520,516,519,519,520,514,519,514,519,
-520,520,520,53,610,610,610,612,642,642,642,642,613,610,610,610,611,516,519,519,514,514,516,520,514,520,516,514,519,520,520,516,
-516,519,514,641,642,642,642,642,545,545,642,545,545,545,545,545,643,516,514,516,519,514,519,516,519,519,514,520,514,516,519,520,
-520,520,520,641,545,642,545,545,642,642,545,545,642,642,545,545,643,519,520,519,516,516,519,519,516,516,514,519,514,519,514,519,
-519,516,516,641,545,545,545,642,642,642,545,545,545,545,545,642,643,519,516,516,514,520,519,520,519,520,514,516,514,519,520,520,
-519,514,520,641,545,545,642,545,545,642,545,545,642,642,545,642,643,516,519,519,519,519,520,516,520,519,520,519,516,520,520,516,
-514,519,514,641,545,545,642,545,545,642,545,642,545,642,545,545,643,514,516,520,520,514,516,519,520,514,516,519,519,519,514,514,
-516,519,516,641,545,545,642,545,642,642,545,642,545,545,545,545,643,519,519,519,514,516,514,519,514,516,516,516,519,520,519,519,
-520,520,520,641,545,642,545,545,642,642,642,642,642,545,545,642,643,519,516,514,520,516,520,519,516,516,519,519,514,516,520,516,
-514,519,519,641,642,545,545,642,545,642,545,545,642,545,642,642,643,514,516,519,519,514,514,516,516,519,516,520,520,520,514,516,
-520,519,519,641,642,642,545,545,642,545,545,545,642,545,642,642,643,519,519,520,520,516,520,519,519,516,514,520,519,516,520,516,
-516,520,516,641,545,642,642,545,545,545,545,642,642,545,545,545,643,514,514,516,514,514,516,516,519,514,520,519,520,514,519,519,
-514,514,519,673,674,674,644,642,545,545,545,642,545,545,645,674,675,519,514,516,519,516,520,516,516,520,516,520,520,519,519,520,
-519,514,520,516,514,519,673,674,674,674,674,674,674,674,675,514,520,519,519,520,514,519,514,514,516,520,520,516,516,519,516,514,
-516,514,519,519,519,514,520,514,519,514,520,514,520,516,519,519,514,520,520,519,516,516,514,516,520,520,516,514,514,519,514,516,
-520,520,520,519,514,520,514,514,516,516,519,514,514,516,516,516,514,516,516,514,514,516,514,516,516,520,519,516,516,516,519,520,
-520,520,514,514,519,514,519,514,519,516,514,519,520,514,514,520,516,519,519,520,514,514,514,516,514,514,520,519,519,516,514,514
-</data>
+ <layer id="1" name="00" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
  </layer>
- <layer id="2" name="01" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,705,706,706,706,706,707,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,705,706,708,514,514,514,514,709,706,707,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,737,514,514,609,610,610,610,611,514,739,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,737,514,609,612,545,545,645,86,741,771,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,737,514,673,674,674,674,675,741,771,803,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,769,740,514,514,514,514,741,771,803,835,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,801,769,770,770,773,770,771,803,835,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,833,801,802,802,805,802,803,835,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,833,834,834,837,834,835,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
+ <layer id="2" name="01" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzt2OlOE1EYxvH5CJhMrwERJGEVEERAuBVQwIRVQVFR4VaU5Qtu7HTvrUALXwCVne7+GyBpypLTmSmeU+ZJfkmTaSbvkzZzzhlNs2PHjkj8BZoWKDj7XFGkaZWoQjVqUFuU/X1kTjI1Y+HZ5z669WMAgxjCsGDf9PvInHZm7Difc45u3/AdP/ATvwT7pt9H5kww4+T5nNt028EufuMP/t7Q96GuaeX65fvIkCnmnhb8rUTTS9eXurX3tCpBuoYs7qtCnDxXXHDDAy98CjxXjSZMtwiiiCGOhMG+qqxBVkWVNciqqLIGpeJkThfc8MALH/wICHaQbQ26KWHmjCCKGOJIIJmaPw+f4810eooWtKINz9COjjzs+55OHzCOj/iEz5jApGDfXOxhchUnc7rghgde+OBHQLCDSnuYMHNGEEUMcSSQTM1/739Pl9sYOfemnxVUi5Fzr8xnhetSzLz3dXPnXpXSSdcuPftzryoxs6ea5/oCFrGEZaxgFWuS7rHM7Kn2+M4+DnCIIxzjBKeS9jWzp3rE9TrUowGP0YgmPJH0v29mT/WK668xglG8wVuM4Z2kfc3sqea5voBFLGEZK1jFmqR9zeyp9vjOPg5wiCMc4wSnkvbNNlU8h6pRg1pJn0lWZoCOgxjC8B3oe1ezzh5sA0GEsIktxfbOFxF5p1rsYJ+NEjxAKcoctzOf1RF5p9pJty48xwt0o0eRvpnvYETeqX6h21dMYRozmFWkb+Y7mMx3qled49fptoEgQtjEliM/1qtszvH2emXHSP4BRNPD0g==
+  </data>
  </layer>
- <layer id="3" name="10" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,817,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,849,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,658,0,0,0,0,0,0,662,663,664,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,694,695,696,0,0,
-0,594,0,0,0,0,0,0,0,0,0,0,0,723,724,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,721,722,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,658,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,817,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,849,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,594,0,0,
-594,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,755,756,0,0,0,0,0,0,0,0,0,0,0,817,0,594,0,0,0,
-0,0,0,0,818,0,0,0,0,0,0,0,0,787,788,0,0,0,0,0,0,0,0,0,0,0,849,0,0,0,0,0,
-658,0,0,0,850,0,0,0,0,0,0,0,0,819,820,0,0,0,0,0,0,0,0,0,0,660,661,0,0,0,0,0,
-0,0,0,0,0,0,0,594,0,0,0,0,0,851,852,0,0,0,658,0,0,0,0,594,0,692,693,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,594,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
+ <layer id="3" name="10" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztz9kNglAABdH3i1bkblvutsVOWyCLQw8YDJmTzP+9IUiSJEmSJEmSJOnX4iiEhFLKKKeCSqqiuddNr+ZTQx9qqaOehvHrau5109vwaUs72tOBjnSi8wL/Xvh0pRvd6UFPetF7gX9jPiWUUkY5FVRStcC/NZ8a+lBLHfU0jF/Xc6+TJOn/fAElFCEr
+  </data>
  </layer>
- <layer id="6" name="11" width="32" height="18">
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
+ <layer id="4" name="11" width="60" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20Hb6AAAAAAAAAAAAB4DCWAAAE=
+  </data>
  </layer>
  <objectgroup id="5" name="entities"/>
 </map>
